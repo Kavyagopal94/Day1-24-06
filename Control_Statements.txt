@@ -1,1 +1,110 @@
+1. Decision-Making Statements:
+================================
 
+if Statement:
+->The if statement evaluates a condition and executes the block of code inside it if the condition is true.
+
+if (condition) {
+    // Code to execute if condition is true
+}
+
+if-else Statement:
+->The if-else statement provides an alternative block of code to execute if the condition is false.
+
+if (condition) {
+    // Code to execute if condition is true
+} else {
+    // Code to execute if condition is false
+}
+
+if-else-if Ladder:
+->The if-else-if ladder allows you to test multiple conditions sequentially.
+
+if (condition1) {
+    // Code to execute if condition1 is true
+} else if (condition2) {
+    // Code to execute if condition2 is true
+} else {
+    // Code to execute if none of the above conditions are true
+}
+
+switch Statement:
+->The switch statement tests a variable against a list of values, executing the corresponding block of code.
+
+switch (variable) {
+    case value1:
+        // Code to execute if variable == value1
+        break;
+    case value2:
+        // Code to execute if variable == value2
+        break;
+    // Add more cases as needed
+    default:
+        // Code to execute if none of the cases match
+}
+
+2. Looping Statements:
+==========================
+
+for Loop:
+->The for loop is used for iterating over a range of values.
+
+for (int i = 0; i < 10; i++) {
+    System.out.println(i);    //1 2 3 4 5 6 7 8 9
+}
+
+Enhanced for Loop (for-each Loop):
+->The enhanced for loop is used for iterating over arrays and collections.
+
+int[] numbers = {1, 2, 3, 4, 5};
+for (int number : numbers) {
+    System.out.println(number);
+}
+
+while Loop:
+->The while loop repeatedly executes a block of code as long as the condition is true.
+
+int i = 0;
+while (i < 10) {
+    System.out.println(i);//0 1 2 3 4 5 6 7 8 9
+    i++;
+}
+
+do-while Loop:
+->The do-while loop is similar to the while loop, but it guarantees that the block of code will be executed at least once.
+
+int i = 0;
+do {
+    System.out.println(i); //0 1 2 3 4 5 6 7 8 9
+    i++;
+} while (i < 10);
+
+3. Branching Statements:
+==========================
+
+break Statement:
+->The break statement is used to terminate a loop or switch statement prematurely.
+
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break; // Exits the loop when i is 5(0 1 2 3 4)
+    }
+    System.out.println(i);
+}
+
+continue Statement:
+->The continue statement skips the current iteration of a loop and proceeds to the next iteration.
+
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        continue; // Skips the rest of the loop body when i is 5(0 1 2 3 4 6 7 8 9)
+    }
+    System.out.println(i);
+}
+
+return Statement:
+->The return statement exits from the current method and optionally returns a value.
+
+public int add(int a, int b) {
+    return a + b; // Returns the sum of a and b
+}
