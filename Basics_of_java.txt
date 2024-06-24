@@ -1,1 +1,143 @@
+Java and its features:
+=======================
+java is an Object oreinted,class based high level programing language used to develop applications like web applications, mobile applications etc.
+
+java features:
+1.Platform Independent- wora architecture(write once run anywhere) can run on any OS.
+2.Object Oriented- everything in java is objects and classes(Abstraction, Encapsulation, Inheritance, Polymorphism).
+3.MultiThreaded- java alllows to run multiple programms concurrently helps in utilizing CPU memory efficiently.
+4.Robust- It uses strong memory management.Java provides automatic garbage collection which runs on the Java Virtual Machine to get rid of objects which are not being used by a Java application anymore.
+5.secure- Java's security features, including bytecode verification, classloader mechanism, security manager, access control, automatic memory management, cryptography, and secure communication protocols, all contribute to making Java a secure language.
+
+JVM JDK JRE
+============
+JDK
+│
+├── JRE
+│   ├── JVM
+│   ├── Core Libraries
+│   └── Other Files
+│
+├── Compiler (javac)
+├── Debugger (jdb)
+├── Archiver (jar)[A package format for bundling Java classes, metadata, and resources into a single file.]
+└── Documentation Generator (javadoc)
+
+JDK- provides environment to develop and run application.
+JRE- provides environment to run application(libraries and necessary files).
+JVM- it converts bytecode(compiler converts source code to bytecode)to machine code and executes it.JVM is platform dependent where as bytecode is platform independent.
+
+Basic Syntax
+==============
+
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+Data Types, Variables and Array
+=================================
+
+Variables: Containers for storing data values, declared with a type.(data_type variableName = value;)
+
+Data Types:
+Java has two categories of data types:
+
+1.Primitive Data Types: These are the basic data types provided by the language.
+
+byte: 8-bit, integer. (1 Byte)
+short: 16-bit, integer. (2 Byte)
+int: 32-bit, integer.(4 Byte)
+long: 64-bit, integer.(8 Byte)
+float: 32-bit, floating point. (4 Byte)
+double: 64-bit, floating point. (8 Byte)
+char: 16-bit Unicode character. (2 Byte)
+boolean: Represents true or false. (1 Bit)
+
+2.Non-Primitive Data Types:These refer to objects and are created using defined classes.
+
+Classes: Defined by the programmer.
+Interfaces: Defined by the programmer.
+Arrays: A special kind of object that holds multiple values of the same type.
+
+Arrays:
+An array is a collection of variables of the same type. Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. Arrays are objects, and they can store either primitive types or reference types (objects).
+
+There are two types of array:
+
+1.single dimension array:
+int[] numbers = {1, 3, 5, 4, 2};
+
+// Using a for loop
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println(numbers[i]);
+}
+
+// Using an enhanced for loop
+for (int num : numbers) {
+    System.out.println(num);
+}
+
+Arrays.sort(numbers); // {1, 2, 3, 5, 9}
+
+2.multi-dimensional array:
+public class MultiDimensionalArrayExample {
+    public static void main(String[] args) {
+        // Declare and initialize a 2D array
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        // Access elements
+        System.out.println("Element at (0, 0): " + matrix[0][0]);
+        matrix[1][2] = 10; // Change an element
+
+        // Loop through the 2D array
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.println("Element at (" + i + ", " + j + "): " + matrix[i][j]);
+            }
+        }
+    }
+}
+
+class type array:
+// Custom class representing a Person
+class Person {
+     String name;
+     int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+@Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+public class ObjectArrayExample {
+    public static void main(String[] args) {
+        // Declare and create an array of Person objects
+        Person[] people = new Person[3];
+
+        // Initialize the array elements with Person objects
+        people[0] = new Person("Alice", 25);
+        people[1] = new Person("Bob", 30);
+        people[2] = new Person("Charlie", 28);
+
+        // Access and print the array elements
+        for (int i = 0; i < people.length; i++) {
+            System.out.println("Person at index " + i + ": " + people[i]);
+        }
+    }
+
+
+
 
